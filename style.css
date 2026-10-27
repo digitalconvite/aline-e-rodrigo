@@ -1,0 +1,606 @@
+:root {
+  --bg-color: #FFFFFF;
+  --bg-outer: #EAEAEA;
+  --primary-gold: #C5A059;
+  --primary-gold-dark: #A4813D;
+  --text-dark: #4A4A4A;
+  --text-muted: #777777;
+  --border-color: #BDBDBD;
+  --font-serif: 'Cinzel', serif;
+  --font-sans: 'Montserrat', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  width: 100%;
+  min-height: 100vh;
+  background-color: var(--bg-outer);
+  font-family: var(--font-sans);
+  color: var(--text-dark);
+  overflow-x: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+/* Container Principal do Convite */
+.card-container {
+  width: 100%;
+  max-width: 520px;
+  background-color: var(--bg-color);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+  min-height: 100vh;
+  padding: 15px;
+}
+
+/* Foto do Topo */
+.top-photo-wrapper {
+  width: 100%;
+  height: 280px;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.top-photo-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.top-photo-wrapper::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, var(--bg-color) 100%);
+}
+
+/* Moldura Dupla idêntica ao Convite da Foto */
+.invitation-frame {
+  width: 100%;
+  border: 1px solid var(--border-color);
+  padding: 6px;
+  background-color: #FFFFFF;
+}
+
+.main-content {
+  border: 1px solid var(--border-color);
+  padding: 30px 18px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+/* Monograma A | R */
+.monogram-container {
+  margin-bottom: 20px;
+}
+
+.monogram-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  color: var(--primary-gold);
+}
+
+.monogram-icon i {
+  font-size: 1.2rem;
+  opacity: 0.9;
+}
+
+.monogram-icon .branch-left {
+  transform: scaleX(-1);
+}
+
+.initials {
+  font-family: var(--font-serif);
+  font-size: 2.2rem;
+  letter-spacing: 2px;
+  font-weight: 500;
+  color: var(--primary-gold);
+}
+
+.initials .divider {
+  font-weight: 300;
+  margin: 0 4px;
+  opacity: 0.7;
+}
+
+/* Nomes dos Noivos */
+.names-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 10px 0 25px;
+}
+
+.left-decoration {
+  position: absolute;
+  left: -20px;
+  top: -40px;
+  width: 100px;
+  height: auto;
+  pointer-events: none;
+  opacity: 0.6;
+}
+
+.couple-names {
+  font-family: var(--font-serif);
+  font-size: 2.5rem;
+  font-weight: 500;
+  color: var(--primary-gold);
+  line-height: 1.2;
+  margin: 10px 0;
+  text-transform: none;
+}
+
+.couple-names .ampersand {
+  font-family: var(--font-serif);
+  font-size: 2rem;
+  font-weight: 400;
+  color: var(--primary-gold);
+  margin: 0 4px;
+}
+
+/* Versículo */
+.versiculo-biblico {
+  font-size: 0.78rem;
+  color: var(--text-dark);
+  letter-spacing: 0.5px;
+  line-height: 1.6;
+  max-width: 90%;
+  margin-bottom: 25px;
+  font-style: italic;
+}
+
+.parents-grid {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 360px;
+  margin-bottom: 25px;
+  font-size: 0.75rem;
+  color: var(--primary-gold) !important; /* Forçando o dourado */
+  line-height: 1.6;
+  font-weight: 500;
+}
+
+/* Garante que qualquer texto interno dos pais também assuma o dourado */
+.parents-grid, .parents-grid div {
+  color: var(--primary-gold) !important;
+}
+.parents-side {
+  flex: 1;
+  text-align: center;
+}
+
+.invitation-call {
+  font-size: 0.8rem;
+  color: var(--text-dark);
+  letter-spacing: 0.5px;
+  margin-bottom: 25px;
+}
+
+/* Data em Destaque Dourada */
+.date-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin: 15px 0;
+}
+
+.date-badge {
+  background-color: transparent;
+  color: var(--primary-gold);
+  font-family: var(--font-serif);
+  font-size: 2.2rem;
+  font-weight: 600;
+  padding: 5px 20px;
+  letter-spacing: 4px;
+  position: relative;
+}
+
+.date-deco {
+  width: 160px;
+  height: auto;
+  object-fit: contain;
+  pointer-events: none;
+  opacity: 0.8;
+}
+
+.date-deco-top { margin-bottom: 2px; }
+.date-deco-bottom { margin-top: 2px; }
+
+/* Horário e Local */
+.time-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-size: 0.82rem;
+  color: var(--text-dark);
+  letter-spacing: 0.5px;
+  margin: 15px 0 20px;
+  line-height: 1.5;
+}
+
+.time-text i {
+  color: var(--primary-gold);
+  font-size: 1rem;
+}
+
+.location-info {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.divider-line {
+  width: 60%;
+  height: 1px;
+  background-color: var(--border-color);
+  margin: 0 auto;
+}
+
+.location-text {
+  font-size: 0.82rem;
+  color: var(--text-dark);
+  letter-spacing: 0.5px;
+  padding: 12px 0;
+  line-height: 1.6;
+}
+
+.location-text strong {
+  color: var(--text-dark);
+  font-weight: 600;
+}
+
+.information-extra {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  letter-spacing: 0.5px;
+  line-height: 1.6;
+  max-width: 85%;
+  margin-bottom: 25px;
+}
+
+.touch-instruction {
+  font-size: 0.7rem;
+  color: var(--primary-gold);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 25px;
+  font-weight: 600;
+}
+
+/* Botões Interativos em Dourado */
+.interactive-buttons {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  margin-bottom: 35px;
+}
+
+.btn-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.btn-row.reverse {
+  flex-direction: row-reverse;
+}
+
+.btn-row:hover {
+  transform: translateY(-2px);
+}
+
+.icon-square {
+  width: 50px;
+  height: 50px;
+  background-color: var(--primary-gold);
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #FFFFFF;
+  font-size: 1.3rem;
+  box-shadow: 0 4px 10px rgba(197, 160, 89, 0.3);
+}
+
+.btn-label {
+  font-size: 0.8rem;
+  color: var(--text-dark);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  position: relative;
+  padding-bottom: 4px;
+  font-weight: 500;
+}
+
+.btn-label::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: var(--primary-gold);
+}
+
+/* Contagem Regressiva */
+.countdown-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px 0 25px;
+  width: 100%;
+  background-color: #FAFAFA;
+  padding: 15px;
+  border-radius: 6px;
+  border: 1px dashed var(--border-color);
+}
+
+.countdown-title {
+  font-size: 0.7rem;
+  color: var(--primary-gold);
+  letter-spacing: 2px;
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+
+.countdown-timer {
+  display: flex;
+  gap: 16px;
+}
+
+.time-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 45px;
+}
+
+.time-box span {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  font-family: var(--font-serif);
+  line-height: 1;
+}
+
+.time-box small {
+  font-size: 0.6rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: 5px;
+}
+
+.waiting-text {
+  font-family: var(--font-serif);
+  font-size: 1.8rem;
+  color: var(--primary-gold);
+  line-height: 1.2;
+  margin: 15px 0 5px;
+  font-weight: 500;
+}
+
+/* Botão de Música */
+.music-wrapper {
+  position: absolute;
+  right: 0px;
+  top: -15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 10;
+}
+
+.music-toggle-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: var(--primary-gold);
+  color: #ffffff;
+  border: none;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  transition: transform 0.2s ease;
+}
+
+.music-toggle-btn:hover {
+  transform: scale(1.08);
+}
+
+.music-toggle-btn.playing {
+  animation: pulse 2s infinite;
+}
+
+.music-label {
+  font-size: 0.55rem;
+  color: var(--text-muted);
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  margin-top: 4px;
+  white-space: nowrap;
+}
+
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 rgba(197, 160, 89, 0.7); }
+  70% { box-shadow: 0 0 0 10px rgba(197, 160, 89, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(197, 160, 89, 0); }
+}
+
+/* Rodapé */
+.bottom-section {
+  width: 100%;
+  margin-top: 15px;
+}
+
+.bottom-photo-wrapper {
+  width: 100%;
+  height: 300px;
+  position: relative;
+}
+
+.bottom-photo-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Modal RSVP */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 9999;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+}
+
+.modal-content {
+  background: #FFFFFF;
+  padding: 25px 20px;
+  border-radius: 6px;
+  width: 100%;
+  max-width: 380px;
+  max-height: 90vh;
+  overflow-y: auto;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  border: 1px solid var(--primary-gold);
+}
+
+.modal-content h3 {
+  color: var(--primary-gold);
+  font-family: var(--font-serif);
+  margin-bottom: 20px;
+  font-size: 1.3rem;
+}
+
+.modal-content .form-group {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  margin-bottom: 15px;
+  width: 100%;
+}
+
+.modal-content label {
+  font-size: 0.75rem;
+  color: var(--text-dark);
+  margin-bottom: 5px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.modal-content input, 
+.modal-content select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid var(--border-color);
+  background: #FFFFFF;
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  border-radius: 4px;
+  color: var(--text-dark);
+  outline: none;
+}
+
+.modal-content input:focus, 
+.modal-content select:focus {
+  border-color: var(--primary-gold);
+}
+
+.modal-btn {
+  background: var(--primary-gold);
+  color: #FFF;
+  border: none;
+  padding: 12px;
+  margin-top: 10px;
+  cursor: pointer;
+  width: 100%;
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  border-radius: 4px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-weight: 600;
+  transition: background 0.2s;
+}
+
+.modal-btn:hover {
+  background: var(--primary-gold-dark);
+}
+
+.modal-btn.btn-cancel {
+  background: #999999;
+  margin-top: 8px;
+}
+
+.modal-btn.btn-cancel:hover {
+  background: #777777;
+}
+
+/* Adaptações Mobile */
+@media screen and (max-width: 600px) {
+  .card-container {
+    padding: 0;
+  }
+
+  .invitation-frame {
+    border-left: none;
+    border-right: none;
+  }
+
+  .couple-names {
+    font-size: 2.1rem;
+  }
+
+  .parents-grid {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .music-wrapper {
+    position: relative;
+    right: auto;
+    top: auto;
+    margin-top: 10px;
+  }
+}
