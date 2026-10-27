@@ -51,6 +51,14 @@ html, body {
   overflow: hidden;
   margin-bottom: 20px;
 }
+/* Foto do monograma */
+.top-photo-monograma {
+  width: 100%;
+  height: 280px;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
 
 .top-photo-wrapper img {
   width: 100%;
@@ -83,42 +91,6 @@ html, body {
   flex-direction: column;
   align-items: center;
   width: 100%;
-}
-
-/* Monograma A | R */
-.monogram-container {
-  margin-bottom: 20px;
-}
-
-.monogram-icon {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  color: var(--primary-gold);
-}
-
-.monogram-icon i {
-  font-size: 1.2rem;
-  opacity: 0.9;
-}
-
-.monogram-icon .branch-left {
-  transform: scaleX(-1);
-}
-
-.initials {
-  font-family: var(--font-serif);
-  font-size: 2.2rem;
-  letter-spacing: 2px;
-  font-weight: 500;
-  color: var(--primary-gold);
-}
-
-.initials .divider {
-  font-weight: 300;
-  margin: 0 4px;
-  opacity: 0.7;
 }
 
 /* Nomes dos Noivos */
