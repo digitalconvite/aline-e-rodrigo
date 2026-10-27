@@ -53,8 +53,8 @@ html, body {
 }
 /* Foto do monograma */
 .top-photo-monograma {
-  width: 100%;
-  height: 280px;
+  width: 50%;
+  height: 50%;
   position: relative;
   overflow: hidden;
   margin-bottom: 20px;
