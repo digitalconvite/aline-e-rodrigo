@@ -79,18 +79,15 @@ html, body {
 /* Moldura Dupla idêntica ao Convite da Foto */
 .invitation-frame {
   width: 100%;
-  border: 1px solid var(--border-color);
-  padding: 6px;
+  border: none;
+  padding: 0;
   background-color: #FFFFFF;
 }
 
 .main-content {
-  border: 1px solid var(--border-color);
-  padding: 30px 18px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
+  border: none !important;
+  outline: none !important;
+  background-color: transparent !important;
 }
 
 /* Nomes dos Noivos */
@@ -102,16 +99,6 @@ html, body {
   align-items: center;
   width: 100%;
   margin: 10px 0 25px;
-}
-
-.left-decoration {
-  position: absolute;
-  left: -20px;
-  top: -40px;
-  width: 100px;
-  height: auto;
-  pointer-events: none;
-  opacity: 0.6;
 }
 
 .couple-names {
