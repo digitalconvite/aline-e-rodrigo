@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', function() {
     rsvpForm.addEventListener('submit', function(e) {
       e.preventDefault();
 
-      const numeroWhatsapp = "5511973968625"; 
+      const numeroWhatsapp = "5511975332597"; 
 
       const nome = document.getElementById('nome').value;
       const celebracao = document.getElementById('presencaCelebracao').value;
